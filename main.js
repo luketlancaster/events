@@ -81,4 +81,20 @@ const pieBuilder = (pieArray) => {
   printToDom('pies', domString);
 }
 
-pieBuilder(pies);
+const findPies = (e) => pieBuilder(pies.filter((pie) => {pie.person === e.target.id}));
+
+const allPies = (e) => pieBuilder(pies);
+
+const events = () => {
+  document.getElementById('Luke').addEventListener('click', findPies);
+  document.getElementById('Mary').addEventListener('click', findPies);
+  document.getElementById('Zoe').addEventListener('click', findPies);
+  document.getElementById('All').addEventListener('click', allPies);  
+}
+
+const init = () => {
+  pieBuilder(pies);
+  events();
+}
+
+init();
