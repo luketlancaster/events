@@ -1,3 +1,35 @@
 body {
-    background-color: darkslategray;
+  background-color: darkslategray;
+  font-family: fantasy;
+}
+
+.pieContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.pieCard {
+  background-size: cover;
+  border: 2px solid burlywood;
+  flex: 1 1 30%;
+  margin: 10px;
+  min-height: 400px;
+}
+
+.innerPie {
+  color: azure;
+  height: 100%;
+  width: 100%;
+  /* background-color: coral; */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, 0));
+  text-align: center;
+}
+
+.innerPie h1 {
+  margin: 0;
+}
+
+.pieCard img {
+  width: 300px;
 }
